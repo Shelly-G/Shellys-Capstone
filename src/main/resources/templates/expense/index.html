@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Let's Split It</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless="${expense} and ${expenseses.size()}">No Expenses Have Been Added Yet</p>
+
+
+<table class="table">
+
+    <tr>
+        <th>Expense</th>
+        <th>The Split</th>
+
+    </tr>
+    <tr th:each="expense : ${expenses}">
+
+
+        <td th:text="${expense.name}"></td>
+
+    </tr>
+
+</table>
+<p>
+    <nav th:fragment="navigation">
+        <a href="/expense/add">Add An Expense</a> |
+        <a href="/expense/remove">Remove An Expense</a>
+    </nav>
+</p>
+
+</body>
+</html>

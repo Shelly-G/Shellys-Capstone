@@ -1,4 +1,4 @@
-package com.shellys_capstone.shellyscapstone.models;
+package com.shellys_capstone.shellyscapstone.models.forms;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
