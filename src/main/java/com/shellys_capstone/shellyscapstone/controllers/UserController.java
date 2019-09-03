@@ -17,6 +17,7 @@ import javax.validation.Valid;
 @RequestMapping("user")
 
 public class UserController {
+
     @SuppressWarnings("deprecation")
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String add(Model model){
