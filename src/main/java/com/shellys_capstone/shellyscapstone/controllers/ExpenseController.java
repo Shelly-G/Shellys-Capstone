@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
+@SuppressWarnings("deprecation")
 @Controller
 @RequestMapping("expense")
+
 public class ExpenseController {
 
     @RequestMapping(value = "")
