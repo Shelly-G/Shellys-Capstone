@@ -12,7 +12,7 @@ import javax.validation.Valid;
 
 
 
-@SuppressWarnings("ALL")
+@SuppressWarnings("deprecation")
 @Controller
 @RequestMapping("user")
 
@@ -29,13 +29,10 @@ public class UserController {
 
         model.addAttribute(user);
 
-        if (user.getPassword() !=null && user.getPassword().equals(verify)){
-            model.addAttribute("name", user.getUsername());
+        if(!errors.hasErrors()){
             return "user/index";
         }
-        model.addAttribute("username", user.getUsername());
-        model.addAttribute("email", user.getEmail());
-        model.addAttribute("error", "Passwords do not match");
+
         return "user/add";
     }
 
