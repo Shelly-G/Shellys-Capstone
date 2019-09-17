@@ -1,4 +1,4 @@
 package com.shellys_capstone.shellyscapstone.models.data;
 
-public class expenseDao {
+public interface SplitDoa {
 }
