@@ -1,0 +1,13 @@
+package com.shellys_capstone.shellyscapstone.models.data;
+
+import com.shellys_capstone.shellyscapstone.models.forms.Expense;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import javax.transaction.Transactional;
+
+
+    @Repository
+    @Transactional
+    public interface expenseDao extends CrudRepository<Expense, Integer> {
+    }
